@@ -77,7 +77,7 @@ public class MainFrame extends JFrame {
         recordButton.setEnabled(true);
         stopRecordButton.setVisible(false);
         try {
-            mapper.writeValue(new File(record.getName() + '-' + dateFormat.format(new Date())), record);
+            mapper.writeValue(new File(record.getName() + '-' + dateFormat.format(new Date()) + ".json"), record);
         } catch (IOException e) {
             e.printStackTrace();
         }
